@@ -1,0 +1,64 @@
+// Counter
+let counter = 0;
+function incrementCounter() {
+  counter++;
+  document.getElementById("counter").innerText = counter;
+}
+function decrementCounter() {
+  counter--;
+  document.getElementById("counter").innerText = counter;
+}
+
+// Progress Tracker
+let progress = 50;
+function updateProgress(value) {
+  progress = value;
+  document.getElementById("progress-bar").value = progress;
+  document.getElementById("progress-value").innerText = `${progress}%`;
+}
+
+// Clock & Timer
+function updateClock() {
+  const now = new Date();
+  document.getElementById("clock").innerText = now.toLocaleTimeString();
+}
+setInterval(updateClock, 1000);
+
+function startTimer() {
+  let timeLeft = parseInt(document.getElementById("timer-input").value);
+  const timerDisplay = document.getElementById("timer-display");
+  const interval = setInterval(() => {
+    if (timeLeft > 0) {
+      timerDisplay.innerText = `${timeLeft--} seconds remaining`;
+    } else {
+      clearInterval(interval);
+      timerDisplay.innerText = "Time's up!";
+    }
+  }, 1000);
+}
+
+// To-Do List
+function addTask() {
+  const taskInput = document.getElementById("new-task");
+  const taskList = document.getElementById("task-list");
+  const li = document.createElement("li");
+  li.innerText = taskInput.value;
+  taskList.appendChild(li);
+  taskInput.value = "";
+}
+
+// Quote Generator
+const quotes = [
+  "The best time to start was yesterday. The next best time is now.",
+  "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+  "Believe you can and you're halfway there.",
+];
+function generateQuote() {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  document.getElementById("quote-display").innerText = quotes[randomIndex];
+}
+
+// Mood Tracker
+function setMood(mood) {
+  document.getElementById("current-mood").innerText = `Your mood: ${mood}`;
+}

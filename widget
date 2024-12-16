@@ -1,0 +1,52 @@
+<div id="widget" style="font-family: Arial, sans-serif; padding: 20px; border-radius: 10px; width: 300px; background: #f4f4f4;">
+  <h2 id="widget-title" style="text-align: center;">Multi-Widget</h2>
+
+  <!-- Counter Widget -->
+  <div id="counter-widget" style="margin-bottom: 20px;">
+    <h3>Counter</h3>
+    <p id="counter" style="font-size: 24px;">0</p>
+    <button onclick="incrementCounter()">+1</button>
+    <button onclick="decrementCounter()">-1</button>
+  </div>
+
+  <!-- Progress Tracker -->
+  <div id="progress-tracker" style="margin-bottom: 20px;">
+    <h3>Progress Tracker</h3>
+    <progress id="progress-bar" value="50" max="100"></progress>
+    <p>Progress: <span id="progress-value">50%</span></p>
+  </div>
+
+  <!-- Timer/Clock -->
+  <div id="timer-clock" style="margin-bottom: 20px;">
+    <h3>Timer/Clock</h3>
+    <p id="clock"></p>
+    <input type="number" id="timer-input" placeholder="Set timer (secs)">
+    <button onclick="startTimer()">Start Timer</button>
+    <p id="timer-display"></p>
+  </div>
+
+  <!-- To-Do List -->
+  <div id="to-do-list" style="margin-bottom: 20px;">
+    <h3>To-Do List</h3>
+    <ul id="task-list"></ul>
+    <input id="new-task" placeholder="New Task" />
+    <button onclick="addTask()">Add</button>
+  </div>
+
+  <!-- Quote Generator -->
+  <div id="quote-generator" style="margin-bottom: 20px;">
+    <h3>Quote Generator</h3>
+    <p id="quote-display">Click below for a quote!</p>
+    <button onclick="generateQuote()">Get Quote</button>
+  </div>
+
+  <!-- Mood Tracker -->
+  <div id="mood-tracker" style="margin-bottom: 20px;">
+    <h3>Mood Tracker</h3>
+    <p>Select your mood:</p>
+    <button onclick="setMood('😊')">😊</button>
+    <button onclick="setMood('😔')">😔</button>
+    <button onclick="setMood('😎')">😎</button>
+    <p id="current-mood">Your mood: 😊</p>
+  </div>
+</div>
